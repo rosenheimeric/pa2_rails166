@@ -1,0 +1,30 @@
+<h1> courses </h1>
+<table>                         
+  <tr>                          
+    <th>Name </th>
+    <th>identification </th>
+    <th>term </th>
+    <th>code </th> 
+    <th>subjects</th>
+    <th>credits</th>
+    <th>continutiy_id</th>
+    <th>requirements</th>
+    <th>description</th>
+    <th>independent_study</th>
+  </tr>
+<% @courses.each do |data| %>      
+  <tr>
+    <td><%= data.name %></td>  
+    <td><%= data.identification %></td> 
+    <td><%= data.term %></td> 
+    <td><%= data.code %></td> 
+    <td><%= data.subject %></td>  
+    <td><%= data.credits%></td>  
+    <td><%= data.continutiy_id%></td>  
+    <td><%= data.requirements%></td>  
+    <td><%= data.description%></td>  
+    <td><%= data.independent_study%></td>  
+  </tr>
+<% end %>                        
+</table>
+

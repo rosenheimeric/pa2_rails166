@@ -1,0 +1,20 @@
+<h1> instructors </h1>
+<table>                         
+  <tr>                          
+    <th>identification </th>
+    <th>email </th>
+    <th>first </th>
+    <th>middle </th> 
+    <th>last</th>
+  </tr>
+<% @instructors.each do |data| %>      
+  <tr>
+    <td><%= data.identification %></td>  
+    <td><%= data.email %></td> 
+    <td><%= data.first %></td> 
+    <td><%= data.middle %></td> 
+    <td><%= data.last%></td>   
+  </tr>
+<% end %>                        
+</table>
+
