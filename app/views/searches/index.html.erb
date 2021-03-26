@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Searches</h1>
+
+
+<%= form_with url: "/searches", method: :get, local: true do |form| %>
+  <%= form.label :search_query, "Search:" %>
+  <%= form.text_field :search_query %>
+  <%= form.label :selected_subject, "Courses:" %>
+  <%= form.select :selected_subject, @input_subjects %>
+  <%= form.submit "Submit" %>
+<% end %>
+
+ <table>       
+  <thead style="display:table-header-group;">                        
+    <tr>    
+      <th id="th1" style="width: 300px;"> course name </th>
+      <th id="th1" style="width: 300px;"> course ID </th>
+    </tr>
+  <thead>
+  <% @courses.each do |data| %>      
+    <tr>
+    <div class="link">
+      <td><u><%= data.name%></td></u></li> 
+    </div>
+      <td><%= data.id %></td> 
+      <td><%= button_to 'Enroll', {:controller => "enrollment_links", :action => "create", :course_id => data.id, :user_id=> session[:user_id]} , :method=>:post  %></td>
+    </tr>
+  <% end %>                        
+  </table>
+
+

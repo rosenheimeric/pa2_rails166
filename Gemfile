@@ -67,5 +67,13 @@ gem 'json'
 gem "better_errors"
 gem "pry-rails"
 
+gem 'bcrypt'
+
+
 #gem 'binding_of_caller'
 #gem 'activerecord-import'
+gem 'pry-byebug'
+gem 'better_errors'
+gem 'awesome_print'
+gem 'faker'
+gem 'hirb'

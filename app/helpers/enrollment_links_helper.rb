@@ -1,0 +1,2 @@
+module EnrollmentLinksHelper
+end

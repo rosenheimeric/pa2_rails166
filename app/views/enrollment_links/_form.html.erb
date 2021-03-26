@@ -1,0 +1,27 @@
+<%= form_with(model: enrollment_link) do |form| %>
+  <% if enrollment_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(enrollment_link.errors.count, "error") %> prohibited this enrollment_link from being saved:</h2>
+
+      <ul>
+        <% enrollment_link.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :course_list %>
+    <%= form.text_field :course_list %>
+  </div>
+
+  <div class="field">
+    <%= form.label : %>
+    <%= form.text_field : %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -32,22 +32,18 @@ subject_data.each do |sub|
         abbreviation: sub['abbreviation'],
         identification: sub['id'],
         term: sub['term'],
-        segments: sub['segments'] 
-    ) 
+        ) 
 end
 
 course_data.each do |course|
-#   independent = rand(0..1)
-#   credit = rand(2...5)
-#   course_name = (Faker::Educator.course_name).capitalize
 
     Course.create(
       name: course['name'], 
-      identification: course['id'], #terms[rand(0..4)]
+      identification: course['subject'['id']], #terms[rand(0..4)]
       term: course['term'], #terms[rand(0...4)], 
       code: course['code'], #(course_name.object_id.to_i), 
       subject: course['subjects'], #(Faker::Educator.subject),
-      credits: course['credits'], #credit, 
+      credits: course['subjects'['segment']], #credit, 
       continutiy_id: course['continutiy id'], #(course_name.object_id.to_i + course_name.object_id.to_i + credit), 
       requirements: course['requirements'], #nil
       description: course['description'], #(course_name + " " + Faker::Hipster.paragraph), 

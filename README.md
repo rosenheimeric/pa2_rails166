@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+https://github.com/rosenheimeric/pa1_rails_166
+
+https://ericrosenheimrails1166.herokuapp.com/
+
+had problems refractoring some scaffolds and additionally strugged with teh search aspect of the pa 

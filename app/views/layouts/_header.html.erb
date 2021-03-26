@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body style="background-color: #DADFFE">
+<nav class="navbar mb-2 bg-danger">
+  <div class="container-fluid">
+
+    <% if logged_in? %>
+      <ul class="nav navbar-header ">
+
+             <li class="nav-link <%= 'active' if current_page?("/") %> nav-item">  
+               <u><a class="nav-link active" href="/">Home</a></u>
+             </li>
+
+             <li class="nav-link <%= 'active' if current_page?("/subjects") %> nav-item">  
+               <u><a class="nav-link active" aria-current="/subjects" href="/subjects">Subjects</a></u>
+             </li>
+
+             <li class="nav-link <%= 'active' if current_page?("/courses") %> nav-item">
+               <u><a class="nav-link" href="/courses">Courses</a></u>
+             </li>
+
+             <li class="nav-link <%= 'active' if current_page?("/instructors") %> nav-item">
+               <u><a class="nav-link" href="/instructors">Instructors</a></u>
+             </li>
+
+             <li class="nav-link <%= 'active' if current_page?("/searches") %> nav-item">
+              <u><a class="nav-link" href="/searches"> Searches</a></u>
+             </li> 
+      </ul>
+      <ul class ="nav navbar-right">
+        <li>
+            <u><%= link_to "Log Out", logout_path, method: :delete %></u>
+        </li> 
+      </ul>
+    <% else %>
+      <ul class="nav navbar-right ">
+        <u><li><%= link_to "Log in", login_path, class: "mx-2" %></li></u> 
+        <u><li><%= link_to "Sign up", signup_path, class: "mx-2" %></li></u>
+      </ul>
+    <% end %>
+  </div>
+</nav>
+</body>

@@ -1,30 +1,48 @@
-<h1> courses </h1>
-<table>                         
-  <tr>                          
-    <th>Name </th>
-    <th>identification </th>
-    <th>term </th>
-    <th>code </th> 
-    <th>subjects</th>
-    <th>credits</th>
-    <th>continutiy_id</th>
-    <th>requirements</th>
-    <th>description</th>
-    <th>independent_study</th>
-  </tr>
-<% @courses.each do |data| %>      
-  <tr>
-    <td><%= data.name %></td>  
-    <td><%= data.identification %></td> 
-    <td><%= data.term %></td> 
-    <td><%= data.code %></td> 
-    <td><%= data.subject %></td>  
-    <td><%= data.credits%></td>  
-    <td><%= data.continutiy_id%></td>  
-    <td><%= data.requirements%></td>  
-    <td><%= data.description%></td>  
-    <td><%= data.independent_study%></td>  
-  </tr>
-<% end %>                        
-</table>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body style = "background-color: #E3E5E4"> 
+  <h1 class='text-center'> Courses </h1>
+  <table>       
+  <thead style="display:table-header-group;">                        
+
+    <tr>    
+      <div class="container">
+          <div class="row">
+            <div class="col-sm">  
+                <th id="th1" style="width: 200px;"><u>Name</u> </th>
+            </div>
+            
+          <div class="col-sm">
+            </div>
+            <div class="col-sm">
+              <th id="th1" style="width: 200px;"><u>Subjects</u></th>
+            </div>
+            
+            <div class="col-sm">
+              </div>
+            <div class="col-sm">
+              <th id="th1" style="width: 200px;"><u>Description</u></th>
+            </div>
+            <div class="col-sm">
+            </div>
+
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+              <th id="th1" style="width: 200px;"><u>Credits</u></th>
+            </div>
+
+          </div>
+      </div>
+    </tr>
+  <thead>
+  <% @courses.each do |data| %>      
+    <tr>
+      <td><%= data.name %></td>  
+      <td><%= data.subject %></td>  
+      <td><%= data.description%></td>  
+      <td><%= %></td>
+    </tr>
+  <% end %>                        
+  </table>
+</body>
 

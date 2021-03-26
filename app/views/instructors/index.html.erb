@@ -1,18 +1,22 @@
-<h1> instructors </h1>
-<table>                         
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<h1 class='text-center'> Instructors </h1>
+<table> 
+<thead style="display:table-header-group;">                        
   <tr>                          
-    <th>identification </th>
-    <th>email </th>
-    <th>first </th>
-    <th>middle </th> 
-    <th>last</th>
+    <th id="th1" style="width: 300px;"><u>Identification</u></th>
+    <th id="th1" style="width: 300px;"><u>Email</u></th>
+    <th id="th1" style="width: 300px;"><u>First</u></th>
+    <th id="th1" style="width: 300px;"><u>Last</u></th>
   </tr>
+ </thead> 
 <% @instructors.each do |data| %>      
   <tr>
     <td><%= data.identification %></td>  
+
     <td><%= data.email %></td> 
+
     <td><%= data.first %></td> 
-    <td><%= data.middle %></td> 
+    
     <td><%= data.last%></td>   
   </tr>
 <% end %>                        
