@@ -28,3 +28,5 @@ https://github.com/rosenheimeric/pa1_rails_166
 https://ericrosenheimrails1166.herokuapp.com/
 
 had problems refractoring some scaffolds and additionally strugged with teh search aspect of the pa 
+
+Had a problem in my schema and the result of that was that I was unable to (within time constraints) set up the enrollment database such that my homepage could fetch enrolled classes. If I had enough time to resolve the issue I would have the enroll button create enrollment links in the database which I would then retrieve on the homepage to display currently enrolled courses. This is surely my fault for starting too late. 
